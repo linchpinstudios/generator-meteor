@@ -44,7 +44,8 @@ describe('meteor generator', function () {
 
     helpers.mockPrompt(this.app, {
       ironRouter: true,
-      less: true
+      less: true,
+      bs: true
     });
 
     this.app.options['skip-install'] = true;

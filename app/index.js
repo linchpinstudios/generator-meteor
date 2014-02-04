@@ -28,11 +28,17 @@ MeteorGenerator.prototype.askFor = function askFor() {
     name: 'less',
     message: 'Will you be using LESS?',
     default: true
+  },{
+    type: 'confirm',
+    name: 'bs',
+    message: 'Would you like to include Bootstrap with LESS?',
+    default: true
   }];
 
   this.prompt(prompts, function (answers) {
     this.ironRouter = answers.ironRouter;
     this.less = answers.less;
+    this.bs = answers.bs;
     cb();
   }.bind(this));
 };
@@ -69,23 +75,49 @@ MeteorGenerator.prototype.app = function app() {
   this.copy('README.md', 'README.md');
 };
 
-MeteorGenerator.prototype.rootin = function rootin() {
+var packages = [
+  'standard-app-packages',
+  'accounts-base',
+  'accounts-password'
+];
+
+var smartPackages = {
+  "meteor": {
+    "git": "https://github.com/meteor/meteor.git",
+    "branch": "master"
+  },
+  "packages": {
+  }
+};
+
+MeteorGenerator.prototype.addRouter = function addRouter() {
   if(this.ironRouter) {
     this.copy('client/routes.js', 'client/routes.js');
-    this.copy('client/views/iron-router/layout.html', 'client/views/layout.html');
-    this.copy('_smart.json', 'smart.json');
-    this.copy('client/views/iron-router/packages', '.meteor/packages');
+    this.copy('iron-router/layout.html', 'client/views/layout.html');
+    packages.push('iron-router');
+    smartPackages.packages["iron-router"] = {};
   } else {
     this.copy('client/views/layout.html', 'client/views/layout.html');
-    this.copy('.meteor/packages', '.meteor/packages');
   }
 };
 
 MeteorGenerator.prototype.addLess = function addLess() {
   if(this.less) {
     this.copy('client/styles/theme.css', 'client/styles/theme.less');
-    this.copy('.meteor/packages-less', '.meteor/packages');
+    packages.push('less');
   } else {
     this.copy('client/styles/theme.css', 'client/styles/theme.css');
   }
 };
+
+MeteorGenerator.prototype.addBs = function addBs() {
+  if(this.bs) {
+    packages.push('bootstrap3-less');
+    smartPackages.packages["bootstrap3-less"] = {};
+  }
+};
+
+MeteorGenerator.prototype.done = function done() {
+  this.write('.meteor/packages', packages.join('\n'));
+  this.write('smart.json', JSON.stringify(smartPackages, null, 2));
+}
