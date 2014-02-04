@@ -1,0 +1,236 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish', '.' ]
+2 info using npm@1.3.26
+3 info using node@v0.10.25
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/jonathanpidgeon/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/tmp.tgz
+12 verbose folder .
+13 info prepublish generator-meteor@0.2.0
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/jonathanpidgeon/.npm/1f1177db-tar.lock
+16 silly lockFile 739114ff-275-0-011518793180584908-tmp-tgz tar:///var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/tmp.tgz
+17 verbose lock tar:///var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/tmp.tgz /Users/jonathanpidgeon/.npm/739114ff-275-0-011518793180584908-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 739114ff-275-0-011518793180584908-tmp-tgz tar:///var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/tmp.tgz
+21 silly lockFile 739114ff-275-0-011518793180584908-tmp-tgz tar:///var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/tmp.tgz
+22 verbose tar unpack /var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/tmp.tgz
+23 silly lockFile 8280a924-275-0-011518793180584908-package tar:///var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/package
+24 verbose lock tar:///var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/package /Users/jonathanpidgeon/.npm/8280a924-275-0-011518793180584908-package.lock
+25 silly lockFile 739114ff-275-0-011518793180584908-tmp-tgz tar:///var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/tmp.tgz
+26 verbose lock tar:///var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/tmp.tgz /Users/jonathanpidgeon/.npm/739114ff-275-0-011518793180584908-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm extractEntry README.md
+31 silly gunzTarPerm extractEntry LICENSE
+32 silly gunzTarPerm extractEntry .jshintrc
+33 silly gunzTarPerm extractEntry .travis.yml
+34 silly gunzTarPerm extractEntry .gitattributes
+35 silly gunzTarPerm extractEntry .editorconfig
+36 silly gunzTarPerm extractEntry app/index.js
+37 silly gunzTarPerm extractEntry app/templates/README.md
+38 silly gunzTarPerm extractEntry app/templates/LICENSE
+39 silly gunzTarPerm extractEntry app/templates/gitignore
+40 silly gunzTarPerm extractEntry app/templates/_smart.json
+41 silly gunzTarPerm extractEntry app/templates/bootstrap/_smart.json
+42 silly gunzTarPerm extractEntry app/templates/bootstrap/packages
+43 silly gunzTarPerm extractEntry app/templates/bootstrap/theme.less
+44 silly gunzTarPerm extractEntry app/templates/client/client.js
+45 silly gunzTarPerm extractEntry app/templates/client/routes.js
+46 silly gunzTarPerm extractEntry app/templates/client/lib/subscriptions.js
+47 silly gunzTarPerm extractEntry app/templates/client/styles/theme.css
+48 silly gunzTarPerm extractEntry app/templates/client/views/home.js
+49 silly gunzTarPerm extractEntry app/templates/client/views/common/alert.html
+50 silly gunzTarPerm extractEntry app/templates/client/views/common/loading.html
+51 silly gunzTarPerm extractEntry app/templates/client/views/home.html
+52 silly gunzTarPerm extractEntry app/templates/client/views/layout.html
+53 silly gunzTarPerm extractEntry app/templates/.meteor/gitignore
+54 silly gunzTarPerm extractEntry app/templates/.meteor/packages
+55 silly gunzTarPerm extractEntry app/templates/.meteor/release
+56 silly gunzTarPerm extractEntry app/templates/iron-router/layout.html
+57 silly gunzTarPerm extractEntry app/templates/lib/collections.js
+58 silly gunzTarPerm extractEntry app/templates/public/robots.txt
+59 silly gunzTarPerm extractEntry app/templates/server/publications.js
+60 silly gunzTarPerm extractEntry app/templates/server/security.js
+61 silly gunzTarPerm extractEntry app/templates/server/server.js
+62 silly gunzTarPerm extractEntry test/test-creation.js
+63 silly gunzTarPerm extractEntry test/test-load.js
+64 silly gunzTarPerm extractEntry test/temp/.npmignore
+65 silly gunzTarPerm extractEntry test/temp/README.md
+66 silly gunzTarPerm extractEntry test/temp/LICENSE
+67 silly gunzTarPerm extractEntry test/temp/smart.json
+68 silly gunzTarPerm extractEntry test/temp/client/client.js
+69 silly gunzTarPerm extractEntry test/temp/client/routes.js
+70 silly gunzTarPerm extractEntry test/temp/client/lib/subscriptions.js
+71 silly gunzTarPerm extractEntry test/temp/client/styles/theme.less
+72 silly gunzTarPerm extractEntry test/temp/client/views/home.js
+73 silly gunzTarPerm extractEntry test/temp/client/views/home.html
+74 silly gunzTarPerm extractEntry test/temp/client/views/layout.html
+75 silly gunzTarPerm extractEntry test/temp/.meteor/.npmignore
+76 silly gunzTarPerm extractEntry test/temp/.meteor/packages
+77 silly gunzTarPerm extractEntry test/temp/.meteor/release
+78 silly gunzTarPerm extractEntry test/temp/public/robots.txt
+79 silly gunzTarPerm extractEntry test/temp/server/publications.js
+80 silly gunzTarPerm extractEntry test/temp/server/security.js
+81 silly gunzTarPerm extractEntry test/temp/server/server.js
+82 silly gunzTarPerm extractEntry test/temp/lib/collections.js
+83 silly lockFile 8280a924-275-0-011518793180584908-package tar:///var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/package
+84 silly lockFile 8280a924-275-0-011518793180584908-package tar:///var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/package
+85 silly lockFile 739114ff-275-0-011518793180584908-tmp-tgz tar:///var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/tmp.tgz
+86 silly lockFile 739114ff-275-0-011518793180584908-tmp-tgz tar:///var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/tmp.tgz
+87 verbose tar pack [ '/Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package.tgz',
+87 verbose tar pack   '/var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/package' ]
+88 verbose tarball /Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package.tgz
+89 verbose folder /var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/package
+90 silly lockFile 8280a924-275-0-011518793180584908-package tar:///var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/package
+91 verbose lock tar:///var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/package /Users/jonathanpidgeon/.npm/8280a924-275-0-011518793180584908-package.lock
+92 silly lockFile edaeb930-nerator-meteor-0-2-0-package-tgz tar:///Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package.tgz
+93 verbose lock tar:///Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package.tgz /Users/jonathanpidgeon/.npm/edaeb930-nerator-meteor-0-2-0-package-tgz.lock
+94 silly lockFile 8280a924-275-0-011518793180584908-package tar:///var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/package
+95 silly lockFile 8280a924-275-0-011518793180584908-package tar:///var/folders/z9/4dg18lyd7492lgtvy6_c_x940000gn/T/npm-8419-cvkxSuGX/1391499800275-0.011518793180584908/package
+96 silly lockFile edaeb930-nerator-meteor-0-2-0-package-tgz tar:///Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package.tgz
+97 silly lockFile edaeb930-nerator-meteor-0-2-0-package-tgz tar:///Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package.tgz
+98 silly lockFile 7f331300-m-generator-meteor-0-2-0-package /Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package
+99 verbose lock /Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package /Users/jonathanpidgeon/.npm/7f331300-m-generator-meteor-0-2-0-package.lock
+100 silly lockFile 7f331300-m-generator-meteor-0-2-0-package /Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package
+101 silly lockFile 7f331300-m-generator-meteor-0-2-0-package /Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package
+102 verbose tar unpack /Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package.tgz
+103 silly lockFile f3b73182-m-generator-meteor-0-2-0-package tar:///Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package
+104 verbose lock tar:///Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package /Users/jonathanpidgeon/.npm/f3b73182-m-generator-meteor-0-2-0-package.lock
+105 silly lockFile edaeb930-nerator-meteor-0-2-0-package-tgz tar:///Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package.tgz
+106 verbose lock tar:///Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package.tgz /Users/jonathanpidgeon/.npm/edaeb930-nerator-meteor-0-2-0-package-tgz.lock
+107 silly gunzTarPerm modes [ '755', '644' ]
+108 silly gunzTarPerm extractEntry package.json
+109 silly gunzTarPerm extractEntry .npmignore
+110 silly gunzTarPerm extractEntry README.md
+111 silly gunzTarPerm extractEntry LICENSE
+112 silly gunzTarPerm extractEntry .editorconfig
+113 silly gunzTarPerm extractEntry .gitattributes
+114 silly gunzTarPerm extractEntry .jshintrc
+115 silly gunzTarPerm extractEntry .travis.yml
+116 silly gunzTarPerm extractEntry app/index.js
+117 silly gunzTarPerm extractEntry app/templates/README.md
+118 silly gunzTarPerm extractEntry app/templates/LICENSE
+119 silly gunzTarPerm extractEntry app/templates/client/client.js
+120 silly gunzTarPerm extractEntry app/templates/client/routes.js
+121 silly gunzTarPerm extractEntry app/templates/client/lib/subscriptions.js
+122 silly gunzTarPerm extractEntry app/templates/client/styles/theme.css
+123 silly gunzTarPerm extractEntry app/templates/client/views/home.js
+124 silly gunzTarPerm extractEntry app/templates/client/views/common/alert.html
+125 silly gunzTarPerm extractEntry app/templates/client/views/common/loading.html
+126 silly gunzTarPerm extractEntry app/templates/client/views/home.html
+127 silly gunzTarPerm extractEntry app/templates/client/views/layout.html
+128 silly gunzTarPerm extractEntry app/templates/_smart.json
+129 silly gunzTarPerm extractEntry app/templates/bootstrap/_smart.json
+130 silly gunzTarPerm extractEntry app/templates/bootstrap/packages
+131 silly gunzTarPerm extractEntry app/templates/bootstrap/theme.less
+132 silly gunzTarPerm extractEntry app/templates/.meteor/gitignore
+133 silly gunzTarPerm extractEntry app/templates/.meteor/packages
+134 silly gunzTarPerm extractEntry app/templates/.meteor/release
+135 silly gunzTarPerm extractEntry app/templates/gitignore
+136 silly gunzTarPerm extractEntry app/templates/iron-router/layout.html
+137 silly gunzTarPerm extractEntry app/templates/lib/collections.js
+138 silly gunzTarPerm extractEntry app/templates/public/robots.txt
+139 silly gunzTarPerm extractEntry app/templates/server/publications.js
+140 silly gunzTarPerm extractEntry app/templates/server/security.js
+141 silly gunzTarPerm extractEntry app/templates/server/server.js
+142 silly gunzTarPerm extractEntry test/test-creation.js
+143 silly gunzTarPerm extractEntry test/test-load.js
+144 silly gunzTarPerm extractEntry test/temp/.npmignore
+145 silly gunzTarPerm extractEntry test/temp/README.md
+146 silly gunzTarPerm extractEntry test/temp/LICENSE
+147 silly gunzTarPerm extractEntry test/temp/.meteor/.npmignore
+148 silly gunzTarPerm extractEntry test/temp/.meteor/packages
+149 silly gunzTarPerm extractEntry test/temp/.meteor/release
+150 silly gunzTarPerm extractEntry test/temp/client/client.js
+151 silly gunzTarPerm extractEntry test/temp/client/routes.js
+152 silly gunzTarPerm extractEntry test/temp/client/lib/subscriptions.js
+153 silly gunzTarPerm extractEntry test/temp/client/styles/theme.less
+154 silly gunzTarPerm extractEntry test/temp/client/views/home.js
+155 silly gunzTarPerm extractEntry test/temp/client/views/home.html
+156 silly gunzTarPerm extractEntry test/temp/client/views/layout.html
+157 silly gunzTarPerm extractEntry test/temp/lib/collections.js
+158 silly gunzTarPerm extractEntry test/temp/public/robots.txt
+159 silly gunzTarPerm extractEntry test/temp/server/publications.js
+160 silly gunzTarPerm extractEntry test/temp/server/security.js
+161 silly gunzTarPerm extractEntry test/temp/server/server.js
+162 silly gunzTarPerm extractEntry test/temp/smart.json
+163 silly lockFile f3b73182-m-generator-meteor-0-2-0-package tar:///Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package
+164 silly lockFile f3b73182-m-generator-meteor-0-2-0-package tar:///Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package
+165 silly lockFile edaeb930-nerator-meteor-0-2-0-package-tgz tar:///Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package.tgz
+166 silly lockFile edaeb930-nerator-meteor-0-2-0-package-tgz tar:///Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package.tgz
+167 verbose chmod /Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package.tgz 644
+168 verbose chown /Users/jonathanpidgeon/.npm/generator-meteor/0.2.0/package.tgz [ 501, 20 ]
+169 silly lockFile 3a52ce78- .
+170 silly lockFile 3a52ce78- .
+171 silly publish { name: 'generator-meteor',
+171 silly publish   version: '0.2.0',
+171 silly publish   description: 'A generator for Yeoman',
+171 silly publish   keywords: [ 'yeoman-generator', 'meteor' ],
+171 silly publish   homepage: 'https://github.com/Pent/generator-meteor',
+171 silly publish   bugs: { url: 'https://github.com/Pent/generator-meteor/issues' },
+171 silly publish   author:
+171 silly publish    { name: 'Jonathan Pidgeon',
+171 silly publish      email: 'jon@empire5design.com',
+171 silly publish      url: 'https://github.com/Pent' },
+171 silly publish   main: 'app/index.js',
+171 silly publish   repository:
+171 silly publish    { type: 'git',
+171 silly publish      url: 'git://github.com/Pent/generator-meteor.git' },
+171 silly publish   scripts: { test: 'mocha' },
+171 silly publish   dependencies: { 'yeoman-generator': '~0.13.0' },
+171 silly publish   devDependencies: { mocha: '~1.12.0' },
+171 silly publish   peerDependencies: { yo: '>=1.0.0-rc.1' },
+171 silly publish   engines: { node: '>=0.8.0', npm: '>=1.2.10' },
+171 silly publish   licenses: [ { type: 'MIT' } ],
+171 silly publish   readme: '# generator-meteor [![Build Status](https://secure.travis-ci.org/Pent/generator-meteor.png?branch=master)](https://travis-ci.org/Pent/generator-meteor)\n\nA [Meteor](http://meteor.com) project generator for [Yeoman](http://yeoman.io).\n\n[![NPM](https://nodei.co/npm/generator-meteor.png)](https://nodei.co/npm/generator-meteor/)\n\n## Prerequisites\n* [Meteorite](https://github.com/oortcloud/meteorite)\n* [nodejs](http://nodejs.com)\n* [yeoman](http://yeoman.io)\n\nTo install meteorite from npm, run:\n\n```\n$ npm install -g meteorite\n```\n\nTo install yeoman from npm, run:\n\n```\n$ npm install -g yo\n```\n\n### Yeoman Generators\n\nTo install generator-meteor from npm, run:\n\n```\n$ npm install -g generator-meteor\n```\n\nCreate a new project directory:\n\n```\n$ mkdir your-new-project && cd $_\n```\n\nInitiate the generator:\n\n```\n$ yo meteor\n```\n\nFinally, run Meteorite:\n\n```\n$ mrt\n```\n\n## Structure Generated with Iron-Router enabled\n```\n/\n    .meteor/\n        .gitignore\n        packages\n        release\n    client/\n        compatibility/\n        lib/\n            subscriptions.js\n        styles/\n            theme.css\n        views/\n            common/\n        home.html\n        home.js\n        layout.html\n    lib/\n        collections.js\n    private/\n    public/\n        fonts/\n        images/\n        robots.txt\n    server/\n        publications.js\n        security.js\n        server.js\n    .gitignore <- contains sensible defaults for files/folders to ignore\n    LICENSE <- default empty license file\n    smart.json <- meteorite package definition\n```\n\n## License\n\n[MIT License](http://en.wikipedia.org/wiki/MIT_License)\n',
+171 silly publish   readmeFilename: 'README.md',
+171 silly publish   _id: 'generator-meteor@0.2.0',
+171 silly publish   dist: { shasum: '8a6c96e52eabd8f4c51dc7454af74334c186563c' },
+171 silly publish   _from: '.' }
+172 verbose url raw generator-meteor
+173 verbose url resolving [ 'https://registry.npmjs.org/', './generator-meteor' ]
+174 verbose url resolved https://registry.npmjs.org/generator-meteor
+175 info trying registry request attempt 1 at 00:43:20
+176 http PUT https://registry.npmjs.org/generator-meteor
+177 http 409 https://registry.npmjs.org/generator-meteor
+178 verbose url raw generator-meteor
+179 verbose url resolving [ 'https://registry.npmjs.org/', './generator-meteor' ]
+180 verbose url resolved https://registry.npmjs.org/generator-meteor
+181 info trying registry request attempt 1 at 00:43:21
+182 http GET https://registry.npmjs.org/generator-meteor
+183 http 200 https://registry.npmjs.org/generator-meteor
+184 error publish fail Cannot publish over existing version.
+184 error publish fail Update the 'version' field in package.json and try again.
+184 error publish fail
+184 error publish fail If the previous version was published in error, see:
+184 error publish fail     npm help unpublish
+184 error publish fail
+184 error publish fail To automatically increment version numbers, see:
+184 error publish fail     npm help version
+185 error System Darwin 13.0.0
+186 error command "node" "/usr/local/bin/npm" "publish" "."
+187 error cwd /Users/jonathanpidgeon/projects/generator-meteor
+188 error node -v v0.10.25
+189 error npm -v 1.3.26
+190 error code EPUBLISHCONFLICT
+191 verbose exit [ 1, true ]
