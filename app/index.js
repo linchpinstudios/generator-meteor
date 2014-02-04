@@ -84,6 +84,7 @@ MeteorGenerator.prototype.rootin = function rootin() {
 MeteorGenerator.prototype.addLess = function addLess() {
   if(this.less) {
     this.copy('client/styles/theme.css', 'client/styles/theme.less');
+    this.copy('.meteor/packages-less', '.meteor/packages');
   } else {
     this.copy('client/styles/theme.css', 'client/styles/theme.css');
   }

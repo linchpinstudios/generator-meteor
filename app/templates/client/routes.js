@@ -1,5 +1,5 @@
 Router.configure({
-  layout: 'layout'
+  layoutTemplate: 'layout'
 });
 
 Router.map(function() {
