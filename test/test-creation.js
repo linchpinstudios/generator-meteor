@@ -30,6 +30,7 @@ describe('meteor generator', function () {
       'client/routes.js',
       'lib/collections.js',
       'public/robots.txt',
+      'public/images/bg.jpg',
       'server/publications.js',
       'server/server.js',
       'server/security.js',

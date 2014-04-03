@@ -65,6 +65,7 @@ MeteorGenerator.prototype.app = function app() {
   this.copy('client/views/home.html', 'client/views/home.html');
   this.copy('lib/collections.js', 'lib/collections.js');
   this.copy('public/robots.txt', 'public/robots.txt');
+  this.copy('public/images/bg.jpg', 'public/images/bg.jpg');
   this.copy('server/publications.js', 'server/publications.js');
   this.copy('server/server.js', 'server/server.js');
   this.copy('server/security.js', 'server/security.js');
@@ -102,11 +103,11 @@ MeteorGenerator.prototype.addRouter = function addRouter() {
 };
 
 MeteorGenerator.prototype.addLess = function addLess() {
-  if(this.less) {
+  if(this.bs) {
     this.copy('client/styles/theme.css', 'client/styles/theme.less');
     packages.push('less');
   } else {
-    this.copy('client/styles/theme.css', 'client/styles/theme.css');
+    this.copy('client/styles/theme.css', 'client/styles/theme.less');
   }
 };
 

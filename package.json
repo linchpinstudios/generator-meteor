@@ -1,7 +1,7 @@
 {
   "name": "generator-meteor",
-  "version": "0.2.3",
-  "description": "A generator for Yeoman",
+  "version": "1.0.0",
+  "description": "A Meteor app generator for Yeoman",
   "keywords": [
     "yeoman-generator",
     "meteor"
@@ -9,7 +9,7 @@
   "homepage": "https://github.com/Pent/generator-meteor",
   "bugs": "https://github.com/Pent/generator-meteor/issues",
   "author": {
-    "name": "Jonathan Pidgeon",
+    "name": "pent",
     "email": "jon@empire5design.com",
     "url": "https://github.com/Pent"
   },

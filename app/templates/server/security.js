@@ -1,4 +1,4 @@
-Posts.allow({
+Posts.deny({
   insert: function() {
     return true;
   },
