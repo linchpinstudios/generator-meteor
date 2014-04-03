@@ -1,6 +1,6 @@
 {
   "name": "generator-meteor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Meteor app generator for Yeoman",
   "keywords": [
     "yeoman-generator",
