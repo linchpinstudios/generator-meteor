@@ -104,7 +104,7 @@ MeteorGenerator.prototype.addRouter = function addRouter() {
 
 MeteorGenerator.prototype.addLess = function addLess() {
   if(this.bs) {
-    this.copy('client/bootstrap/theme.less', 'client/styles/theme.less');
+    this.copy('bootstrap/theme.less', 'client/styles/theme.less');
     packages.push('less');
   } else {
     this.copy('client/styles/theme.css', 'client/styles/theme.less');
