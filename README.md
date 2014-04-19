@@ -41,10 +41,16 @@ Initiate the generator:
 $ yo meteor
 ```
 
-Finally, run Meteorite:
+Update the smart.json packages using Meteorite:
 
 ```
-$ mrt
+$ mrt update
+```
+
+Finally, run Meteor:
+
+```
+$ meteor
 ```
 
 ## Structure Generated with Iron-Router enabled
