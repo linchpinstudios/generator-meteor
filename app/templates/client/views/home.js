@@ -1,11 +1,11 @@
 Template.home.helpers({
-  posts: function() {
-    return Posts.find().fetch();
+  myAppVariable: function() {
+    return Session.get('myAppVariable');
   }
 });
 
 Template.home.events({
   'click button': function(event, template) {
-    Meteor.call('insertRandomPost');
+    Session.set('myAppVariable', Math.floor(Math.random() * 11));
   }
 });
