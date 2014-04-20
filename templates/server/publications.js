@@ -1,3 +1,3 @@
 Meteor.publish('<%= name %>', function() {
-  return <%= name %>.find();
+  return <%= classyName %>.find();
 })
