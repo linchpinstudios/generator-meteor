@@ -27,6 +27,7 @@ describe('meteor generator', function () {
       'client/views/layout.html',
       'client/views/home.html',
       'client/views/home.js',
+      'client/views/common/loading.html',
       'client/routes.js',
       'lib/collections.js',
       'public/robots.txt',
@@ -44,8 +45,7 @@ describe('meteor generator', function () {
 
     helpers.mockPrompt(this.app, {
       ironRouter: true,
-      less: true,
-      bs: true
+      bootstrap: true
     });
 
     this.app.options['skip-install'] = true;

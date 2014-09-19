@@ -21,7 +21,7 @@ To install yeoman from npm, run:
 $ npm install -g yo
 ```
 
-### Yeoman Generators
+### The Best Instructions You'll See All Day
 
 To install generator-meteor from npm, run:
 
@@ -41,7 +41,7 @@ Initiate the generator:
 $ yo meteor
 ```
 
-Update the smart.json packages using Meteorite:
+Sync the smart.json packages using Meteorite:
 
 ```
 $ mrt update
@@ -53,7 +53,24 @@ Finally, run Meteor:
 $ meteor
 ```
 
-## Structure Generated with Iron-Router enabled
+## *NEW* View and Collection Generators
+Generator-Meteor now supports primitive scaffolding using Yeoman sub-generators
+
+To generate a new Meteor Collection, try using:
+
+```
+$ yo meteor:collection yourCollectionName
+```
+
+To generate a new Meteor Template view/events/helper, try this one out:
+
+```
+$ yo meteor:view viewName
+```
+
+These generators will be extended over time and I hope you make good use of them!
+
+## Structure Generated with Iron-Router Enabled
 ```
 /
     .meteor/
@@ -68,9 +85,10 @@ $ meteor
             theme.css
         views/
             common/
-        home.html
-        home.js
-        layout.html
+            home.html
+            home.js
+            layout.html
+        routes.js
     lib/
         collections.js
     private/
