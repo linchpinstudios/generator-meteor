@@ -4,26 +4,23 @@
 @font-family-sans-serif: "Muli", Helvetica, Arial, sans-serif;
 @headings-font-family: "Muli", Helvertica, Arial, sans-serif;
 @headings-font-weight: 400;
-@color: #fff;
+@color: #e1e1e1;
 @background: transparent;
 @border: #fff;
 
 html {
-  background: url('/images/bg.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  color: @color;
+  background: #242424;
 }
 
 .jumbotron {
   background: transparent;
   text-align: center;
   h1 {
-    color: #fff;
+    color: @color;
   }
   h2 {
-    color: #eee;
+    color: spin(@color, 40);
   }
 }
 

@@ -95,8 +95,7 @@ MeteorGenerator.prototype.addRouter = function addRouter() {
   if(this.ironRouter) {
     this.copy('client/routes.js', 'client/routes.js');
     this.copy('iron-router/layout.html', 'client/views/layout.html');
-    packages.push('iron-router');
-    smartPackages.packages["iron-router"] = {};
+    packages.push('iron:router');
   } else {
     this.copy('client/views/layout.html', 'client/views/layout.html');
   }
@@ -113,7 +112,6 @@ MeteorGenerator.prototype.addLess = function addLess() {
 
 MeteorGenerator.prototype.addBs = function addBs() {
   if(this.bs) {
-    packages.push('bootstrap3-less');
     smartPackages.packages["bootstrap3-less"] = {};
   }
 };
