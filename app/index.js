@@ -84,10 +84,6 @@ var packages = [
   'standard-app-packages'
 ];
 
-var smartPackages = {
-  "packages": {}
-};
-
 Generator.prototype.addRouter = function addRouter() {
   if (this.ironRouter) {
     this.copy('client/routes.js', 'client/routes.js');
@@ -107,5 +103,4 @@ Generator.prototype.addBootstrap = function addBootstrap() {
 
 Generator.prototype.done = function done() {
   this.write('.meteor/packages', packages.join('\n'));
-  this.write('smart.json', JSON.stringify(smartPackages, null, 2));
 };

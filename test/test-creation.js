@@ -41,7 +41,6 @@ describe('meteor generator', function () {
       '.jshintrc',
       '.editorconfig',
       '.travis.yml',
-      'smart.json',
       'LICENSE',
       'README.md'
     ];
