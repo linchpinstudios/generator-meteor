@@ -2,6 +2,6 @@ Template.<%= name %>View.helpers({
 
 });
 
-Template .<%= name %>View.events({
+Template.<%= name %>View.events({
 
 });
