@@ -16,7 +16,7 @@ describe('meteor generator', function () {
     };
     this.meteor = helpers
     .run(path.join(__dirname, '../app'))
-    .inDir(path.join(__dirname, './tmp'))
+    .inDir(path.join(__dirname, './temp'))
     .withPrompts(mockPrompts);
     done();
   });
@@ -59,7 +59,7 @@ describe('meteor generator', function () {
       this.meteor.on('end', function() {
         helpers
         .run(path.join(__dirname, '../collection'))
-        .inDir(path.join(__dirname, './tmp'))
+        .inDir(path.join(__dirname, './temp'))
         .withGenerators(['underscore.string'])
         .withArguments(['dogs'])
         .on('end', function() {
@@ -73,7 +73,7 @@ describe('meteor generator', function () {
       this.meteor.on('end', function() {
         helpers
         .run(path.join(__dirname, '../view'))
-        .inDir(path.join(__dirname, './tmp'))
+        .inDir(path.join(__dirname, './temp'))
         .withGenerators(['underscore.string'])
         .withArguments(['dogs'])
         .on('end', function() {
