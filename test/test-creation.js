@@ -3,57 +3,59 @@
 
 var path    = require('path');
 var helpers = require('yeoman-generator').test;
-
+var assert  = require('yeoman-generator').assert;
+var _s      = require('underscore.string');
 
 describe('meteor generator', function () {
-  beforeEach(function (done) {
-    helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
-      if (err) {
-        return done(err);
-      }
-
-      this.app = helpers.createGenerator('meteor:app', [
-        '../../app'
-      ]);
-      done();
-    }.bind(this));
-  });
-
-  it('creates expected files', function (done) {
+  describe('generation of files intact', function() {
+    var meteor;
     var expected = [
       'client/client.js',
-      'client/styles/theme.less',
       'client/lib/subscriptions.js',
-      'client/views/layout.html',
-      'client/views/home.html',
       'client/views/home.js',
+      'client/views/home.html',
       'client/views/common/loading.html',
-      'client/routes.js',
       'lib/collections.js',
       'public/robots.txt',
       'server/publications.js',
       'server/server.js',
       'server/security.js',
       '.meteor/.gitignore',
-      '.meteor/packages',
       '.meteor/release',
       '.gitignore',
       '.jshintrc',
-      '.editorconfig',
       '.travis.yml',
+      '.editorconfig',
       'LICENSE',
-      'README.md'
+      'README.md',
+      '.meteor/packages',
+      'client/views/layout.html',
+      'client/routes.js',
+      'client/styles/theme.css'
     ];
 
-    helpers.mockPrompt(this.app, {
+    var mockPrompts = {
       ironRouter: true,
       bootstrap: true
+    };
+
+    var mockOptions = {
+      'skip-install': true
+    };
+
+    beforeEach(function () {
+      meteor = helpers
+      .run(path.join(__dirname, '../app'))
+      .inDir(path.join(__dirname, '.tmp'))
+      .withGenerators([[helpers.createDummyGenerator(), 'mocha:app']]);
     });
 
-    this.app.options['skip-install'] = true;
-    this.app.run({}, function () {
-      helpers.assertFiles(expected);
-      done();
+    it('should copy over files', function(done) {
+      meteor.withOptions(mockOptions).on('end', function(failures) {
+        assert.file(expected);
+        done();
+      });
     });
   });
 });
+

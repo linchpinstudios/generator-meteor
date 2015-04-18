@@ -1,8 +1,10 @@
 'use strict';
 var util = require('util');
 var path = require('path');
+var mkdirp = require('mkdirp');
 var _s = require('underscore.string');
 var yeoman = require('yeoman-generator');
+var yosay = require('yosay');
 
 //construct generator
 var Generator = module.exports = function Generator(args, options) {
@@ -13,13 +15,18 @@ var Generator = module.exports = function Generator(args, options) {
   this.appname = this.appname || path.basename(process.cwd());
   //clean appname up to use as a variable
   this.appname = _s(this.appname).camelize().slugify().humanize();
+  this.packages = [
+    'standard-app-packages'
+  ];
 };
 
 util.inherits(Generator, yeoman.generators.Base);
 
 Generator.prototype.welcome = function welcome() {
   // welcome message
-  console.log(this.yeoman);
+  if (!this.options['skip-welcome-message']) {
+    this.log(yosay());
+  }
 };
 
 Generator.prototype.askFor = function askFor() {
@@ -45,21 +52,16 @@ Generator.prototype.askFor = function askFor() {
 
 // generate the basic scaffolding for a Meteor project
 Generator.prototype.app = function app() {
-  this.mkdir('client');
-  this.mkdir('client/compatibility');
-  this.mkdir('client/styles');
-  this.mkdir('client/lib');
-  this.mkdir('client/views');
-  this.mkdir('client/views/common');
-  this.mkdir('lib');
-  this.mkdir('server');
-  this.mkdir('server/lib');
-  this.mkdir('public');
-  this.mkdir('public/fonts');
-  this.mkdir('public/images');
-  this.mkdir('private');
-  this.mkdir('packages');
-  this.mkdir('.meteor');
+  mkdirp('client/compatibility');
+  mkdirp('client/styles');
+  mkdirp('client/lib');
+  mkdirp('client/views/common');
+  mkdirp('lib');
+  mkdirp('server/lib');
+  mkdirp('public/fonts');
+  mkdirp('public/images');
+  mkdirp('private');
+  mkdirp('.meteor');
 
   this.copy('client/client.js', 'client/client.js');
   this.copy('client/lib/subscriptions.js', 'client/lib/subscriptions.js');
@@ -81,15 +83,11 @@ Generator.prototype.app = function app() {
   this.copy('README.md', 'README.md');
 };
 
-var packages = [
-  'standard-app-packages'
-];
-
 Generator.prototype.addRouter = function addRouter() {
   if (this.ironRouter) {
     this.copy('client/routes.js', 'client/routes.js');
     this.copy('iron-router/layout.html', 'client/views/layout.html');
-    packages.push('iron:router');
+    this.packages.push('iron:router');
   } else {
     this.copy('client/views/layout.html', 'client/views/layout.html');
   }
@@ -97,11 +95,11 @@ Generator.prototype.addRouter = function addRouter() {
 
 Generator.prototype.addBootstrap = function addBootstrap() {
   if (this.bootstrap) {
-    packages.push('twbs:bootstrap');
+    this.packages.push('twbs:bootstrap');
   }
   this.copy('client/styles/theme.css', 'client/styles/theme.css');
 };
 
 Generator.prototype.done = function done() {
-  this.write('.meteor/packages', packages.join('\n'));
+  this.write('.meteor/packages', this.packages.join('\n'));
 };
