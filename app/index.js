@@ -100,7 +100,7 @@ Generator.prototype.addRouter = function addRouter() {
 
 Generator.prototype.addBootstrap = function addBootstrap() {
   if (this.bootstrap) {
-    packages.push('bootstrap');
+    packages.push('twbs:bootstrap');
   }
   this.copy('client/styles/theme.css', 'client/styles/theme.css');
 };

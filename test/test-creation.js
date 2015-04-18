@@ -38,6 +38,9 @@ describe('meteor generator', function () {
       '.meteor/packages',
       '.meteor/release',
       '.gitignore',
+      '.jshintrc',
+      '.editorconfig',
+      '.travis.yml',
       'smart.json',
       'LICENSE',
       'README.md'
