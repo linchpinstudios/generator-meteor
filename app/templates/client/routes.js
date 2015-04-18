@@ -1,11 +1,16 @@
 Router.configure({
-  layoutTemplate: 'layout'
+  layoutTemplate: 'layout',
+  loadingTemplate: 'loading'
 });
 
-Router.map(function() {
-  this.route('home', {
-    path: '/',
-    template: 'home'
-  });
-});
+Router.route('/', {name: 'home', controller: 'MainController'});
 
+MainController = RouteController.extend({
+  action: function() {
+  	this.render('home', {
+	    data: function () {
+	      return { posts: ['post red', 'post blue'] }
+	    }
+  	});
+  }
+});

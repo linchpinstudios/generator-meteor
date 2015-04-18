@@ -1,20 +1,13 @@
 # generator-meteor [![Build Status](https://secure.travis-ci.org/Pent/generator-meteor.png?branch=master)](https://travis-ci.org/Pent/generator-meteor)
 
 A [Meteor](http://meteor.com) project generator for [Yeoman](http://yeoman.io).
-*Updated for Meteor 0.9.*!
+*Updated for Meteor 1.0!
 
 [![NPM](https://nodei.co/npm/generator-meteor.png)](https://nodei.co/npm/generator-meteor/)
 
 ## Prerequisites
-* [Meteorite](https://github.com/oortcloud/meteorite)
 * [nodejs](http://nodejs.com)
 * [yeoman](http://yeoman.io)
-
-To install meteorite from npm, run:
-
-```
-$ npm install -g meteorite
-```
 
 To install yeoman from npm, run:
 
@@ -22,7 +15,7 @@ To install yeoman from npm, run:
 $ npm install -g yo
 ```
 
-### The Best Instructions You'll See All Day
+### Install
 
 To install generator-meteor from npm, run:
 
@@ -40,12 +33,6 @@ Initiate the generator:
 
 ```
 $ yo meteor
-```
-
-Sync the smart.json packages using Meteorite:
-
-```
-$ mrt update
 ```
 
 Finally, run Meteor:

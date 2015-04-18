@@ -31,7 +31,7 @@ Generator.prototype.askFor = function askFor() {
     }, {
       type: 'confirm',
       name: 'bootstrap',
-      message: 'Shall we include Bootstrap with LESS?',
+      message: 'Shall we include Bootstrap?',
       default: true
     }];
 
@@ -73,6 +73,9 @@ Generator.prototype.app = function app() {
   this.copy('.meteor/gitignore', '.meteor/.gitignore');
   this.copy('.meteor/release', '.meteor/release');
   this.copy('gitignore', '.gitignore');
+  this.copy('jshintrc', '.jshintrc');
+  this.copy('travis', '.travis.yml');
+  this.copy('editorconfig', '.editorconfig');
   this.copy('LICENSE', 'LICENSE');
   this.copy('README.md', 'README.md');
 };
@@ -97,12 +100,9 @@ Generator.prototype.addRouter = function addRouter() {
 
 Generator.prototype.addBootstrap = function addBootstrap() {
   if (this.bootstrap) {
-    this.copy('bootstrap/theme.less', 'client/styles/theme.less');
-    packages.push('less');
-    smartPackages.packages["bootstrap3-less"] = {};
-  } else {
-    this.copy('client/styles/theme.css', 'client/styles/theme.css');
+    packages.push('bootstrap');
   }
+  this.copy('client/styles/theme.css', 'client/styles/theme.css');
 };
 
 Generator.prototype.done = function done() {
