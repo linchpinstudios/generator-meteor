@@ -32,7 +32,7 @@
     "yo": ">=1.0.0",
     "generator-mocha": ">=0.1.0",
     "gulp": ">=3.5.0",
-    "lodash": ">=3.7.0"
+    "underscore.string": ">=3.0.3"
   },
   "devDependencies": {
     "mocha": "*"

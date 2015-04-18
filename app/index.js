@@ -1,6 +1,7 @@
 'use strict';
 var util = require('util');
 var path = require('path');
+var _s = require('underscore.string');
 var yeoman = require('yeoman-generator');
 
 //construct generator
@@ -11,7 +12,7 @@ var Generator = module.exports = function Generator(args, options) {
   //set appname from argument-defined appname or get the path
   this.appname = this.appname || path.basename(process.cwd());
   //clean appname up to use as a variable
-  this.appname = this._.camelize(this._.slugify(this._.humanize(this.appname)));
+  this.appname = _s(this.appname).camelize().slugify().humanize();
 };
 
 util.inherits(Generator, yeoman.generators.Base);
