@@ -1,11 +1,12 @@
 'use strict';
 var util = require('util');
 var yeoman = require('yeoman-generator');
-var _s = require('underscore.string');
+var classify = require('underscore.string/classify');
 
 var Generator = module.exports = function Generator() {
   yeoman.generators.NamedBase.apply(this, arguments);
-  this.classyName = _s(this.name).classify();
+  this.classyName = classify(this.name);
+  this.name = this.name.toLowerCase();
 };
 
 util.inherits(Generator, yeoman.generators.NamedBase);
