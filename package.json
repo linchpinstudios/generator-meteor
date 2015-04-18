@@ -28,12 +28,11 @@
     "chalk": "^1.0.0",
     "wiredep": "^2.2.2",
     "yeoman-generator": "^0.19.1",
-    "yosay": "^1.0.0"
-  },
-  "peerDependencies": {
+    "yosay": "^1.0.0",
     "yo": ">=1.0.0",
     "generator-mocha": ">=0.1.0",
-    "gulp": ">=3.5.0"
+    "gulp": ">=3.5.0",
+    "lodash": "3.7.0"
   },
   "devDependencies": {
     "mocha": "*"
