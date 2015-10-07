@@ -65,9 +65,9 @@ Generator.prototype.app = function app() {
 
   this.copy('client/client.js', 'client/client.js');
   this.copy('client/lib/subscriptions.js', 'client/lib/subscriptions.js');
-  this.copy('client/views/home.js', 'client/views/home.js');
-  this.copy('client/views/home.html', 'client/views/home.html');
-  this.copy('client/views/common/loading.html', 'client/views/common/loading.html');
+  this.copy('client/views/home/home.js', 'client/views/home/home.js');
+  this.copy('client/views/home/home.jade', 'client/views/home/home.jade');
+  this.copy('client/views/common/loading.jade', 'client/views/common/loading.jade');
   this.copy('lib/collections.js', 'lib/collections.js');
   this.copy('public/robots.txt', 'public/robots.txt');
   this.copy('server/publications.js', 'server/publications.js');
@@ -86,10 +86,10 @@ Generator.prototype.app = function app() {
 Generator.prototype.addRouter = function addRouter() {
   if (this.ironRouter) {
     this.copy('client/routes.js', 'client/routes.js');
-    this.copy('iron-router/layout.html', 'client/views/layout.html');
+    this.copy('iron-router/layout.jade', 'client/views/layout.jade');
     this.packages.push('iron:router');
   } else {
-    this.copy('client/views/layout.html', 'client/views/layout.html');
+    this.copy('client/views/layout.jade', 'client/views/layout.jade');
   }
 };
 
@@ -97,7 +97,7 @@ Generator.prototype.addBootstrap = function addBootstrap() {
   if (this.bootstrap) {
     this.packages.push('twbs:bootstrap');
   }
-  this.copy('client/styles/theme.css', 'client/styles/theme.css');
+  this.copy('client/styles/theme.scss', 'client/styles/theme.scss');
 };
 
 Generator.prototype.done = function done() {
