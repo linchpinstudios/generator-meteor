@@ -12,6 +12,7 @@ var Generator = module.exports = function Generator() {
 util.inherits(Generator, scriptBase);
 
 Generator.prototype.createViewFiles = function createViewFiles() {
-  this.writeTemplate('client/view/view.html', path.join('client/views', this.name.toLowerCase() + '.html'));
-  this.writeTemplate('client/view/view.js', path.join('client/views', this.name.toLowerCase() + '.js'));
+  var name = this.name.toLowerCase();
+  this.writeTemplate('client/view/view.html', path.join('client/views/modules/', name, name + '.html'));
+  this.writeTemplate('client/view/view.js', path.join('client/views/modules/', name, name + '.js'));
 };
