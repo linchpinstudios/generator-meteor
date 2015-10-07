@@ -67,6 +67,7 @@ Generator.prototype.app = function app() {
   this.copy('client/lib/subscriptions.js', 'client/lib/subscriptions.js');
   this.copy('client/views/home/home.js', 'client/views/home/home.js');
   this.copy('client/views/home/home.jade', 'client/views/home/home.jade');
+  this.copy('client/views/home/home.scss', 'client/views/home/home.scss');
   this.copy('client/views/common/loading.jade', 'client/views/common/loading.jade');
   this.copy('lib/collections.js', 'lib/collections.js');
   this.copy('public/robots.txt', 'public/robots.txt');
