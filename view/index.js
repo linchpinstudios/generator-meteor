@@ -13,7 +13,7 @@ util.inherits(Generator, scriptBase);
 
 Generator.prototype.createViewFiles = function createViewFiles() {
   var name = this.name.toLowerCase();
-  this.writeTemplate('client/view/view.html', path.join('client/views/modules/', name, name + '.html'));
+  this.writeTemplate('client/view/view.jade', path.join('client/views/modules/', name, name + '.jade'));
   this.writeTemplate('client/view/view.js', path.join('client/views/modules/', name, name + '.js'));
   this.writeTemplate('client/view/view.scss', path.join('client/views/modules/', name, name + '.scss'));
 };
