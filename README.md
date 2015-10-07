@@ -1,4 +1,4 @@
-# generator-meteor [![Build Status](https://secure.travis-ci.org/linchpinstudios/generator-meteor.png?branch=master)](https://travis-ci.org/Pent/generator-meteor)
+# generator-meteor [![Build Status](https://secure.travis-ci.org/linchpinstudios/generator-meteor.png?branch=master)](https://travis-ci.org/linchpinstudios/generator-meteor)
 
 A [Meteor](http://meteor.com) project generator for [Yeoman](http://yeoman.io).
 *Updated for Meteor 1.0!
@@ -33,6 +33,13 @@ Initiate the generator:
 
 ```
 $ yo meteor
+```
+
+Install, Meteor dependancies:
+
+```
+$ meteor add mquandalle:jade
+$ meteor add fourseven:scss
 ```
 
 Finally, run Meteor:

@@ -1,0 +1,226 @@
+// @import "_variables";
+// @import "_mixins";
+
+//
+// Typography
+// --------------------------------------------------
+// Customize this to meet your project needs
+
+
+// Body text
+// -------------------------
+
+body {
+  @include fontRegular;
+  color: $defaultTextColor;
+  line-height: $baseLineHeight;
+}
+
+p {
+  b, strong {
+    @include fontBold;
+    & em {
+      @include fontBoldItalic;
+    }
+  }
+  em {
+    @include fontItalic;
+    & b, & strong {
+      @include fontBoldItalic;
+    }
+  }
+
+}
+
+strong, b {
+  font-family: $extendedBoldFontFamily;
+}
+
+// Links
+// -------------------------
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+  transition: color $transitionFast linear;
+}
+a:hover,
+a:active,
+a:focus {
+  color: $linkColorHover;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+  letter-spacing: -1px;
+  text-rendering: optimizeLegibility; // disable this if we have performance issues.
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, .t1 {
+  @include fontHeading(80px);
+  line-height: px-em(48px, 48px);
+  margin-bottom: px-em(24px, 48px);
+  letter-spacing: .1em;
+}
+h2, .t2 {
+  @include fontHeading(56px);
+  line-height: px-em(56px, 56px);
+  margin-bottom: px-em(35px, 56px);
+  letter-spacing: .1em;
+}
+h3, .t3 {
+  font-family: $baseFontFamily;
+  font-size: px-em(33px);
+  line-height: px-em(33px, 33px);
+  margin-bottom: px-em(16px, 32px);
+}
+h4, .t4 {
+  @include fontHeading(36px);
+  line-height: px-em(36px, 36px);
+  margin-bottom: px-em(18px, 36px);
+}
+h5, .t5 {
+  font-family: $baseFontFamily;
+  font-size: px-em(20px);
+  line-height: px-em(33px, 20px);
+  margin-bottom: px-em(9px, 18px);
+  letter-spacing: 0.1em;
+}
+h6, .t6 {
+  font-family: $extendedFontFamily;
+  font-size: px-em(18px);
+  line-height: px-em(16px, 16px);
+  margin-bottom: px-em(8px, 16px);
+}
+
+p, .p1 {
+  @include fontRegular();
+  font-size: px-em(20px);
+  line-height: px-em(33px, 20px);
+  letter-spacing: .1em;
+  margin-bottom: px-em(16px, 16px);
+}
+
+.p2 {
+  @include fontRegular();
+  font-size: px-em(15px);
+  line-height: px-em(18px, 15px);
+  margin-bottom: px-em(16px, 15px);
+}
+
+.p3 {
+  @include fontRegular();
+  font-size: px-em(12px);
+  line-height: px-em(17px, 14px);
+  margin-bottom: px-em(16px, 14px);
+}
+
+.p4 {
+  font-family: $extendedFontFamily;
+  font-size: px-em(14px);
+  line-height: px-em(17px, 14px);
+  margin-bottom: px-em(16px, 14px);
+}
+
+.p5 {
+  font-family: $extendedFontFamily;
+  font-size: px-em(16px);
+  line-height: px-em(28px, 16px);
+  margin-bottom: px-em(17px, 16px);
+}
+
+.p6 {
+  @include fontRegular();
+  font-size: px-em(16px);
+  line-height: px-em(28px, 16px);
+  margin-bottom: px-em(17px, 16px);
+  letter-spacing: .1em;
+  strong, b {
+    font-family: $headingsFontFamily;
+  }
+}
+
+@media #{$tablet} {
+  h1, .t1 {
+    @include fontHeading(32px);
+    line-height: px-em(32px, 32px);
+  }
+  h2, .t2 {
+    @include fontHeading(24px);
+    line-height: px-em(24px, 24px);
+  }
+  h3, .t3 {
+
+  }
+  h4, .t4 {
+    @include fontHeading(18px);
+    line-height: px-em(18px, 18px);
+  }
+  h5, .t5 {
+    font-size: px-em(20px);
+    line-height: px-em(29px, 20px);
+    letter-spacing: 0.1em;
+  }
+  h6, .t6 {
+    font-size: px-em(18px);
+    line-height: px-em(16px, 16px);
+  }
+
+  p, .p1 {
+   // font-size: px-em(14px);
+   // line-height: px-em(21px, 14px);
+  }
+
+  .p2 {
+    font-size: px-em(13px);
+    line-height: px-em(16px, 13px);
+  }
+
+  .p3 {
+    font-size: px-em(12px);
+    line-height: px-em(15px, 12px);
+  }
+}
+
+@media #{$mobile} {
+  h1, .t1 {
+    @include fontHeading(32px);
+    line-height: px-em(32px, 32px);
+  }
+  h2, .t2 {
+    @include fontHeading(24px);
+    line-height: px-em(24px, 24px);
+  }
+  h3, .t3 {
+
+  }
+  h4, .t4 {
+    @include fontHeading(18px);
+    line-height: px-em(18px, 18px);
+  }
+  h5, .t5 {
+    font-size: px-em(20px);
+    line-height: px-em(29px, 20px);
+    letter-spacing: 0.1em;
+  }
+  h6, .t6 {
+    @include fontHeading(16px);
+    line-height: px-em(16px, 16px);
+  }
+
+  p, .p1 {
+   font-size: px-em(20px);
+   line-height: px-em(29px, 20px);
+  }
+
+  .p2 {
+    font-size: px-em(13px);
+    line-height: px-em(16px, 13px);
+  }
+
+  .p3 {
+    font-size: px-em(12px);
+    line-height: px-em(15px, 12px);
+  }
+}

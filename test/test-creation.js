@@ -46,7 +46,16 @@ describe('meteor generator', function () {
         '.meteor/packages',
         'client/views/layout.jade',
         'client/routes.js',
-        'client/styles/theme.scss'
+        'client/styles/theme.scss',
+        'client/styles/_variables.scss',
+        'client/styles/partials/_buttons.scss',
+        'client/styles/partials/_fonts.scss',
+        'client/styles/partials/_icons.scss',
+        'client/styles/partials/_inputs.scss',
+        'client/styles/partials/_list.scss',
+        'client/styles/partials/_mixins.scss',
+        'client/styles/partials/_type.scss',
+        'client/styles/partials/_visibility.scss'
       ];
       this.meteor.on('end', function() {
         assert.file(expected);

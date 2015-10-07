@@ -1,0 +1,62 @@
+// COLORS
+$white:           #ffffff;
+$gray90:          #e5e5e5;
+$gray80:          #cccccc;
+$gray70:          #b2b2b2;
+$gray60:          #999999;
+$gray50:          #7f7f7f;
+$gray40:          #666666;
+$gray30:          #4c4c4c;
+$gray20:          #333333;
+$gray10:          #191919;
+$black:           #000000;
+
+$defaultTextColor: $black;
+$linkColor: $black;
+$linkColorHover: $black;
+
+// TYPOGRAPHY
+$baseLineHeight: 1.25 !default;
+$baseFontFamily: Verdana, Arial, Helvetica, sans-serif;
+$headingsFontFamily: Verdana, Arial, Helvetica, sans-serif;
+
+$bodyFontLightWeight: 300;
+$bodyFontNormalWeight: 400;
+$bodyFontBoldWeight: 700;
+$headingLightWeight: 300;
+$headingNormalWeight: 400;
+$headingBoldWeight: 700;
+
+// TRANSITIONS
+$transitionSuperslow:   0.5s;
+$transitionSlower:      0.4s;
+$transitionSlow:        0.3s;
+$transitionSlowish:     0.25s;
+$transitionNormal:      0.2s;
+$transitionFast:        0.15s;
+$transitionFaster:      0.10s;
+$transitionSuperfast:   0.05s;
+$transitionFastest:     0.025s;
+
+// Z-INDEX
+$zTopLevel: 400;
+$zSetForward: 300;
+$zMiddle: 200;
+$zBottomLevel: 100;
+
+// GRID
+$grid-num-cols: 12;
+$grid-mobile-breakpoint: 768px;
+$grid-tablet-breakpoint: 1024px;
+$grid-max-width: 1280px;
+
+// Media Querries
+$mobile: "only screen and (max-width : #{$grid-mobile-breakpoint - 1})";
+$tablet: "only screen and (min-width : #{$grid-mobile-breakpoint}) and (max-width : #{$grid-tablet-breakpoint})";
+$retina: "only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi)";
+$mobileRetina: "#{$retina} and (max-width : #{$grid-mobile-breakpoint - 1})";
+$tabletRetina: "#{$retina} and (min-width : #{$grid-mobile-breakpoint}) and (max-width : #{$grid-tablet-breakpoint})";
+
+// EASING
+
+@import "lib/animation";
