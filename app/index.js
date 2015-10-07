@@ -99,6 +99,7 @@ Generator.prototype.addBootstrap = function addBootstrap() {
     this.packages.push('twbs:bootstrap');
   }
   this.copy('client/styles/theme.scss', 'client/styles/theme.scss');
+  this.copy('client/styles/_variables.scss', 'client/styles/_variables.scss');
   this.copy('client/styles/partials/_buttons.scss', 'client/styles/partials/_buttons.scss');
   this.copy('client/styles/partials/_fonts.scss', 'client/styles/partials/_fonts.scss');
   this.copy('client/styles/partials/_icons.scss', 'client/styles/partials/_icons.scss');
@@ -106,7 +107,7 @@ Generator.prototype.addBootstrap = function addBootstrap() {
   this.copy('client/styles/partials/_list.scss', 'client/styles/partials/_list.scss');
   this.copy('client/styles/partials/_mixins.scss', 'client/styles/partials/_mixins.scss');
   this.copy('client/styles/partials/_type.scss', 'client/styles/partials/_type.scss');
-  this.copy('client/styles/partials/_visibility.scss' 'client/styles/partials/_visibility.scss');
+  this.copy('client/styles/partials/_visibility.scss', 'client/styles/partials/_visibility.scss');
 };
 
 Generator.prototype.done = function done() {
