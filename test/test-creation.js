@@ -78,7 +78,7 @@ describe('meteor generator', function () {
         .withGenerators(['underscore.string'])
         .withArguments(['dogs'])
         .on('end', function() {
-          assert.fileContent('client/views/dogs/dogs.jade', /\template(name=\"dogsView\")/);
+          assert.fileContent('client/views/dogs/dogs.jade', /dogsView/);
           done();
         });
       });
