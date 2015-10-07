@@ -26,9 +26,10 @@ describe('meteor generator', function () {
       var expected = [
         'client/client.js',
         'client/lib/subscriptions.js',
-        'client/views/home.js',
-        'client/views/home.html',
-        'client/views/common/loading.html',
+        'client/views/home/home.js',
+        'client/views/home/home.jade',
+        'client/views/home/home.scss',
+        'client/views/common/loading.jade',
         'lib/collections.js',
         'public/robots.txt',
         'server/publications.js',
@@ -43,9 +44,9 @@ describe('meteor generator', function () {
         'LICENSE',
         'README.md',
         '.meteor/packages',
-        'client/views/layout.html',
+        'client/views/layout.jade',
         'client/routes.js',
-        'client/styles/theme.css'
+        'client/styles/theme.scss'
       ];
       this.meteor.on('end', function() {
         assert.file(expected);
@@ -77,7 +78,7 @@ describe('meteor generator', function () {
         .withGenerators(['underscore.string'])
         .withArguments(['dogs'])
         .on('end', function() {
-          assert.fileContent('client/views/dogs.html', /\<template name=\"dogsView\"\>/);
+          assert.fileContent('client/views/dogs/dogs.jade', /\<template name=\"dogsView\"\>/);
           done();
         });
       });
@@ -86,4 +87,3 @@ describe('meteor generator', function () {
 
 
 });
-
