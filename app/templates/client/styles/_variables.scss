@@ -17,8 +17,8 @@ $linkColorHover: $black;
 
 // TYPOGRAPHY
 $baseLineHeight: 1.25 !default;
-$baseFontFamily: Verdana, Arial, Helvetica, sans-serif;
-$headingsFontFamily: Verdana, Arial, Helvetica, sans-serif;
+$baseFontFamily: 'Arial Black', Helvetica, sans-serif;
+$headingsFontFamily: 'Arial Black', Helvetica, sans-serif;
 
 $bodyFontLightWeight: 300;
 $bodyFontNormalWeight: 400;
@@ -56,7 +56,3 @@ $tablet: "only screen and (min-width : #{$grid-mobile-breakpoint}) and (max-widt
 $retina: "only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi)";
 $mobileRetina: "#{$retina} and (max-width : #{$grid-mobile-breakpoint - 1})";
 $tabletRetina: "#{$retina} and (min-width : #{$grid-mobile-breakpoint}) and (max-width : #{$grid-tablet-breakpoint})";
-
-// EASING
-
-@import "lib/animation";

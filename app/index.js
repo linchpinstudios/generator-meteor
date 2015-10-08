@@ -104,6 +104,7 @@ Generator.prototype.addBootstrap = function addBootstrap() {
   this.copy('client/styles/partials/_fonts.scss', 'client/styles/partials/_fonts.scss');
   this.copy('client/styles/partials/_icons.scss', 'client/styles/partials/_icons.scss');
   this.copy('client/styles/partials/_inputs.scss', 'client/styles/partials/_inputs.scss');
+  this.copy('client/styles/partials/_layout.scss', 'client/styles/partials/_layout.scss');
   this.copy('client/styles/partials/_list.scss', 'client/styles/partials/_list.scss');
   this.copy('client/styles/partials/_mixins.scss', 'client/styles/partials/_mixins.scss');
   this.copy('client/styles/partials/_type.scss', 'client/styles/partials/_type.scss');

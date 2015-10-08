@@ -52,6 +52,7 @@ describe('meteor generator', function () {
         'client/styles/partials/_fonts.scss',
         'client/styles/partials/_icons.scss',
         'client/styles/partials/_inputs.scss',
+        'client/styles/partials/_layout.scss',
         'client/styles/partials/_list.scss',
         'client/styles/partials/_mixins.scss',
         'client/styles/partials/_type.scss',
